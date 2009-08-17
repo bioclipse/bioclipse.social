@@ -41,7 +41,7 @@
     <property name="target"
               ref="TwitterManagerTarget" />
     <property name="proxyInterfaces"
-              value="net.bioclipse.twitter.business.ITwitterManager" />
+              value="net.bioclipse.twitter.business.IJavaScriptTwitterManager" />
     <property name="interceptorNames" >
         <list>
             <value>recordingAdvisor</value>
@@ -56,7 +56,7 @@
     <property name="target"
               ref="TwitterManagerTarget" />
     <property name="proxyInterfaces"
-              value="net.bioclipse.twitter.business.ITwitterManager" />
+              value="net.bioclipse.twitter.business.IJavaTwitterManager" />
     <property name="interceptorNames" >
         <list>
                 <value>recordingAdvisor</value>
