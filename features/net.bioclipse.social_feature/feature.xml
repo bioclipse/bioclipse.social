@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.bioclipse.social_feature"
+      label="Bioclipse Social Feature"
+      version="2.1.0.v20090807"
+      provider-name="Bioclipse Team"
+      plugin="net.bioclipse.twitter">
+
+   <description>
+      Bioclipse Social - Linking Bioclipse to the Social Web.
+   </description>
+
+   <copyright>
+      Copyright (c) 2008 The Bioclipse Project Team and others.
+Eclipse Public License.
+
+This feature includes the JTwitter library, which is:
+© Copyright Winterwell Associates Ltd, 2008 and ThinkTank Mathematics Ltd, 2007, except where otherwise stated. It is released as open-source under the LGPL license. This code comes with no warranty or support.
+   </copyright>
+
+   <license url="http://jena.sourceforge.net/license.html">
+      Bioclipse RDF feature licens: EPL
+
+License of JTwitter:
+   </license>
+
+   <url>
+      <discovery label="JTwitter Homepage" url="http://www.winterwell.com/software/jtwitter.php"/>
+   </url>
+
+   <requires>
+      <import feature="net.bioclipse.core_feature" version="2.1.0.v20090807" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.winterwell.jtwitter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.bioclipse.twitter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
