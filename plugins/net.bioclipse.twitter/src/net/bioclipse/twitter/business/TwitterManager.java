@@ -10,13 +10,21 @@
  ******************************************************************************/
 package net.bioclipse.twitter.business;
 
+import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.managers.business.IBioclipseManager;
+import net.bioclipse.twitter.Activator;
+import net.bioclipse.twitter.preferences.PreferenceConstants;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.runtime.Preferences;
+
+import winterwell.jtwitter.Twitter;
 
 public class TwitterManager implements IBioclipseManager {
 
     private static final Logger logger = Logger.getLogger(TwitterManager.class);
+    
+    private Twitter twitter;
 
     /**
      * Gives a short one word name of the manager used as variable name when
@@ -25,4 +33,26 @@ public class TwitterManager implements IBioclipseManager {
     public String getManagerName() {
         return "twitter";
     }
+
+    public void setStatus(String status) throws BioclipseException {
+        if (status == null)
+            throw new BioclipseException(
+                "Status message must not be null."
+            );
+        
+        if (status.length() > 140)
+            throw new BioclipseException(
+                "Status message may not exceed 140 characters."
+            );
+
+        if (twitter == null) {
+            Preferences prefs = Activator.getDefault().getPluginPreferences();
+            String username = prefs.getString(PreferenceConstants.TWITTER_USERNAME);
+            String password = prefs.getString(PreferenceConstants.TWITTER_PASSWORD);
+            twitter = new Twitter(username, password);
+            logger.info("Logged in as: " + username);
+        }
+        twitter.setStatus(status);
+    }
+
 }
