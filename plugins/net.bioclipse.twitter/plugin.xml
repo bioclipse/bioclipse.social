@@ -6,4 +6,15 @@
                           service="net.bioclipse.twitter.business.TwitterManagerFactory">
       </scriptContribution>
   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page class="net.bioclipse.twitter.preferences.TwitterPreferencePage"
+            id="net.bioclipse.twitter.preferences.TwitterPreferencePage"
+            name="Twitter Settings">
+      </page>
+   </extension>
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="net.bioclipse.twitter.preferences.PreferenceInitializer"/>
+   </extension>
+
 </plugin>
