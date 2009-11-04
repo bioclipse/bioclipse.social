@@ -151,6 +151,8 @@ public class MyExperimentManager implements IBioclipseManager {
         filename = removeType(filename);
         info.put(WorkflowProperty.FILENAME, filename);
         String url = results.get(0).get(1);
+        if (url.indexOf("^^") != -1)
+            url = url.substring(0, url.indexOf("^^"));
         info.put(WorkflowProperty.URL, url);
 
         monitor.worked(50);
