@@ -20,6 +20,7 @@ import net.bioclipse.core.ResourcePathTransformer;
 import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.managers.business.IBioclipseManager;
 import net.bioclipse.rdf.business.RDFManager;
+import net.bioclipse.rdf.model.StringMatrix;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
@@ -141,16 +142,16 @@ public class MyExperimentManager implements IBioclipseManager {
             "    mebase:filename ?filename;" +
             "    mebase:content-url ?url." +
             "}";
-        List<List<String>> results = 
+        StringMatrix results = 
             rdf.sparqlRemote(SPARQL_ENDPOINT, sparql, monitor);
-        if (results.size() == 0)
+        if (results.getRowCount() == 0)
             throw new BioclipseException(
                 "Workflow not found."
             );
-        String filename = results.get(0).get(0);
+        String filename = results.get(1, "filename");
         filename = removeType(filename);
         info.put(WorkflowProperty.FILENAME, filename);
-        String url = results.get(0).get(1);
+        String url = results.get(1, "url");
         if (url.indexOf("^^") != -1)
             url = url.substring(0, url.indexOf("^^"));
         info.put(WorkflowProperty.URL, url);
@@ -210,14 +211,15 @@ public class MyExperimentManager implements IBioclipseManager {
             "  FILTER regex(?title, \"" + query + "\") ." +
             "  FILTER regex(?typetitle, \"Bioclipse\") ." +
             "}";
-        List<List<String>> results =
+        StringMatrix results =
             rdf.sparqlRemote(SPARQL_ENDPOINT, sparql, monitor);
-        for (List<String> row : results) {
-            String workflow = row.get(0); // only one column
-            int number = Integer.valueOf(workflow.substring(
-                    workflow.lastIndexOf('/')+1
-            ));
-            workflows.add(number);
+        if (results.getRowCount() > 0) {
+        	for (String workflow : results.getColumn("workflow")) {
+        		int number = Integer.valueOf(workflow.substring(
+        				workflow.lastIndexOf('/')+1
+        		));
+        		workflows.add(number);
+        	}
         }
 
         return workflows;
