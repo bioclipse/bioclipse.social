@@ -224,4 +224,41 @@ public class MyExperimentManager implements IBioclipseManager {
 
         return workflows;
     }
+
+    public List<Integer> list(IProgressMonitor monitor)
+    throws BioclipseException {
+    if (monitor == null) {
+        monitor = new NullProgressMonitor();
+    }
+
+    List<Integer> workflows = new ArrayList<Integer>();
+    monitor.beginTask("Retrieving all BSL workflows...", 1);
+
+    String sparql =
+        "PREFIX mecontrib: <http://rdf.myexperiment.org/ontologies/" +
+                           "contributions/>" +
+        "PREFIX mebase: <http://rdf.myexperiment.org/ontologies/" +
+                           "base/>" +
+        "PREFIX dcterms: <http://purl.org/dc/terms/>" +
+        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+        "SELECT ?workflow WHERE {" +
+        "  ?workflow mebase:has-content-type ?type ." +
+        "  ?workflow rdf:type                mecontrib:Workflow ." +
+        "  ?type     rdf:type                mebase:ContentType ." +
+        "  ?type     dcterms:title           ?typetitle ." +
+        "  FILTER regex(?typetitle, \"Bioclipse\") ." +
+        "}";
+    StringMatrix results =
+        rdf.sparqlRemote(SPARQL_ENDPOINT, sparql, monitor);
+    if (results.getRowCount() > 0) {
+    	for (String workflow : results.getColumn("workflow")) {
+    		int number = Integer.valueOf(workflow.substring(
+    				workflow.lastIndexOf('/')+1
+    		));
+    		workflows.add(number);
+    	}
+    }
+
+    return workflows;
+}
 }

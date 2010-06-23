@@ -47,4 +47,10 @@ public interface IMyExperimentManager extends IBioclipseManager {
         		"in the title."
     )
     public List<Integer> search(String query) throws BioclipseException;
+
+    @Recorded
+    @PublishedMethod(
+        methodSummary="Lists all BSL workflows."
+    )
+    public List<Integer> list() throws BioclipseException;
 }
