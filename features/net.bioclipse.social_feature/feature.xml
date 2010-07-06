@@ -533,8 +533,8 @@ That&apos;s all there is to it!
    </url>
 
    <requires>
-      <import feature="net.bioclipse.core_feature" version="2.4.0.RC1" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.rdf_feature" version="2.4.0.RC1"/>
+      <import feature="net.bioclipse.core_feature" version="2.4.0" match="greaterOrEqual"/>
+      <import feature="net.bioclipse.rdf_feature" version="2.4.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
