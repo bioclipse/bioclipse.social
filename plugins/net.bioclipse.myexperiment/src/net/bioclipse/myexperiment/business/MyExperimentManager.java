@@ -137,7 +137,7 @@ public class MyExperimentManager implements IBioclipseManager {
         String sparql =
             "PREFIX mebase: <http://rdf.myexperiment.org/ontologies/base/> " +
             "SELECT ?filename ?url WHERE {" +
-            "  <http://rdf.myexperiment.org/Workflow/" +
+            "  <http://www.myexperiment.org/workflows/" +
             workflowNumber + ">" +
             "    mebase:filename ?filename;" +
             "    mebase:content-url ?url." +
