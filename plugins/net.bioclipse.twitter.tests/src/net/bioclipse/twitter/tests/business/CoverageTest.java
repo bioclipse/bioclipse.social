@@ -10,8 +10,8 @@
  ******************************************************************************/
 package net.bioclipse.twitter.tests.business;
 
+import net.bioclipse.core.api.managers.IBioclipseManager;
 import net.bioclipse.core.tests.coverage.AbstractCoverageTest;
-import net.bioclipse.managers.business.IBioclipseManager;
 import net.bioclipse.twitter.business.ITwitterManager;
 import net.bioclipse.twitter.business.TwitterManager;
 

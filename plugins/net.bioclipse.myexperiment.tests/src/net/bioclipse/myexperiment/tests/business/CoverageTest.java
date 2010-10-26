@@ -10,8 +10,8 @@
  ******************************************************************************/
 package net.bioclipse.myexperiment.tests.business;
 
+import net.bioclipse.core.api.managers.IBioclipseManager;
 import net.bioclipse.core.tests.coverage.AbstractCoverageTest;
-import net.bioclipse.managers.business.IBioclipseManager;
 import net.bioclipse.myexperiment.business.IMyExperimentManager;
 import net.bioclipse.myexperiment.business.MyExperimentManager;
 

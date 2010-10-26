@@ -14,7 +14,8 @@ Require-Bundle:
  org.springframework.bundle.spring.aop,
  net.sf.cglib,
  org.springframework.osgi.aopalliance.osgi,
- com.winterwell.jtwitter;bundle-version="1.2.0"
+ com.winterwell.jtwitter;bundle-version="1.2.0",
+ net.bioclipse.core.api;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: net.bioclipse.twitter,
  net.bioclipse.twitter.business

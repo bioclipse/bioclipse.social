@@ -16,7 +16,7 @@ import java.net.URI;
 import java.net.URL;
 import java.util.List;
 
-import net.bioclipse.core.ResourcePathTransformer;
+import net.bioclipse.core.api.ResourcePathTransformer;
 import net.bioclipse.myexperiment.business.IMyExperimentManager;
 
 import org.eclipse.core.resources.IFile;

@@ -16,9 +16,9 @@ import java.util.List;
 import java.util.Map;
 
 import net.bioclipse.business.BioclipsePlatformManager;
-import net.bioclipse.core.ResourcePathTransformer;
-import net.bioclipse.core.business.BioclipseException;
-import net.bioclipse.managers.business.IBioclipseManager;
+import net.bioclipse.core.api.BioclipseException;
+import net.bioclipse.core.api.ResourcePathTransformer;
+import net.bioclipse.core.api.managers.IBioclipseManager;
 import net.bioclipse.rdf.business.RDFManager;
 import net.bioclipse.rdf.model.StringMatrix;
 
