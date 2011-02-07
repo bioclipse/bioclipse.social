@@ -18,9 +18,9 @@ import java.util.Map;
 import net.bioclipse.business.BioclipsePlatformManager;
 import net.bioclipse.core.ResourcePathTransformer;
 import net.bioclipse.core.business.BioclipseException;
+import net.bioclipse.core.domain.StringMatrix;
 import net.bioclipse.managers.business.IBioclipseManager;
 import net.bioclipse.rdf.business.RDFManager;
-import net.bioclipse.rdf.model.StringMatrix;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
