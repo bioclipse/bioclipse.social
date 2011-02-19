@@ -19,7 +19,7 @@
 
    <includes
          id="net.bioclipse.social_feature"
-         version="2.4.1.v20100830"/>
+         version="2.5.0.20110219"/>
 
    <requires>
       <import feature="net.bioclipse.core_feature" version="2.4.0.20100709"/>
