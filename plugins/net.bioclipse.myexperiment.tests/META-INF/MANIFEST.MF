@@ -14,4 +14,6 @@ Require-Bundle: org.eclipse.ui,
  net.bioclipse.ui
 Bundle-ActivationPolicy: lazy
 Export-Package: net.bioclipse.myexperiment.tests
-Import-Package: org.junit
+Import-Package: org.junit,
+ org.junit.runner,
+ org.junit.runners
