@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.social_site"
       label="Bioclipse-Social Update Site"
-      version="2.4.1.v20100830"
+      version="2.5.0.qualifier"
       provider-name="The Bioclipse Team">
 
    <description url="http://www.example.com/description">
@@ -19,11 +19,11 @@
 
    <includes
          id="net.bioclipse.social_feature"
-         version="2.5.0.20110219"/>
+         version="2.5.0.qualifier"/>
 
    <requires>
-      <import feature="net.bioclipse.core_feature" version="2.4.0.20100709"/>
-      <import feature="net.bioclipse.rdf_feature" version="2.4.1.20110201"/>
+      <import feature="net.bioclipse.core_feature" version="2.5.0.qualifier"/>
+      <import feature="net.bioclipse.rdf_feature" version="2.5.0.qualifier"/>
    </requires>
 
 </feature>
