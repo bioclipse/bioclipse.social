@@ -208,7 +208,7 @@ public class MyExperimentManager implements IBioclipseManager {
             "  ?workflow dcterms:title           ?title ." +
             "  ?type     rdf:type                mebase:ContentType ." +
             "  ?type     dcterms:title           ?typetitle ." +
-            "  FILTER regex(?title, \"" + query + "\") ." +
+            "  FILTER regex(?title, \"" + query + "\", \"i\") ." +
             "  FILTER regex(?typetitle, \"Bioclipse\") ." +
             "}";
         StringMatrix results =
