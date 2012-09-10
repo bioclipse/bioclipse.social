@@ -3,11 +3,11 @@
       id="net.bioclipse.social_feature"
       label="Bioclipse Social Feature"
       version="2.5.0.qualifier"
-      provider-name="Bioclipse Team"
+      provider-name="bioclipse.net"
       plugin="net.bioclipse.myexperiment">
 
    <description>
-      Bioclipse Social - Linking Bioclipse to the Social Web.
+      Linking Bioclipse to the Social Web with support for e.g. MyExperiment (www.myexperiment.org) for wharing workflows and scripts.
    </description>
 
    <copyright>
