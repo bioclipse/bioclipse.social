@@ -19,7 +19,7 @@
 
    <includes
          id="net.bioclipse.social_feature"
-         version="2.5.0.qualifier"/>
+         version="0.0.0"/>
 
    <requires>
       <import feature="net.bioclipse.core_feature" version="2.5.0.qualifier"/>
