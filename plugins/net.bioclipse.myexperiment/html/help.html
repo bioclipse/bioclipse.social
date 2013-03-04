@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+    <TITLE>My experiment</TITLE>
+  <link rel="stylesheet" href="../../../PRODUCT_PLUGIN/narrow_book.css" type="text/css">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<h2>About myexperiment</h2>
+Myexperiment is a website that make it easy to find and use scientific workflows and other research objects. It also allow you to build communities to share your workflow and research objects with others. You can read more about myexperiment on the <a href="http://www.myexperiment.org/">website</a>.<br/>
+<h2>Myexperiment in Bioclipse</h2>
+In Bioclipse you can search for and download workflows etc on myexperiment that is related to Bioclipse, i.e. the things been taged with "bioclipse". To be able to download e.g. a script from the site then you have to have its id-number. If you don't know the id-number you can get it either from the list that you get when writing <code>myexperiment.list()</code> in the JavaScrip console or by searching with for one or more words in the title of workflow. You may also click on <a href="http://www.myexperiment.org/search?filter=TAG_ID%28%221578%22%29&query=bioclipse">this link</a> to get a list (in your browser) of the items in myexperiment that has been taged with &quot;bioclipse&quot;.<br/> 
+<h2>Myexperiment scripting</h2>
+A short description of the availably commands for myexperiment in bioclipse is availably <a href="../../net.bioclipse.doc/html/index.html#myexperiment">here</a> and below is an example.<br/>
+Let's say that we for some reason wants to know if there's some thing for Bioclipse on myexperiment that has something to do with OpenTox. So the start by writing this in JavaScript console:<br/><br/>
+<code>&gt; res = myexperiment.search("OpenTox")</code><br/><br/>
+When Bioclipse is done searching the result will be written in the JavaScript console, in this case it will say this:<br/><br/>
+<code>List<Integer> of size 8</code><br/><br/>
+This means that there is eight items that has OpenTox in its headline and the variable that we called <code>res</code> is the id of each of the items. If you want to download one of them e.g. the first in the list write:<br/><br/>
+<code>&gt; myexperiment.downloadWorkflow(res.get(0), &quot;/MyExperiment/Opentox&quot;)</code><br/><br/>
+Except for downloading the item the line above also tells Bioclipse to save it as a txt-file with the name &quot;OpenTox&quot; in the director &quot;MyExperiment&quot; in your Bioclipse workspace.
+
+</BODY>
+</HTML>
