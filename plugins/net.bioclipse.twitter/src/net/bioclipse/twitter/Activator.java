@@ -22,6 +22,7 @@ import org.osgi.util.tracker.ServiceTracker;
 /**
  * The Activator class controls the plug-in life cycle
  */
+// The Twitter feature is not included in the social feature for the moment
 public class Activator extends AbstractUIPlugin {
 
     private static final Logger logger = Logger.getLogger(Activator.class);

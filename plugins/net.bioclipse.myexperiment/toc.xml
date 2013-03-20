@@ -4,6 +4,6 @@
 <toc label="Social">
     <topic href="html/help.html" label="My experiment in Bioclipse">
  </topic>
-    <topic href="../net.bioclipse.twitter/html/help.html" label="Twitter in Bioclipse">
-    </topic>
+    <!--topic href="../net.bioclipse.twitter/html/help.html" label="Twitter in Bioclipse">
+    </topic-->
 </toc>
