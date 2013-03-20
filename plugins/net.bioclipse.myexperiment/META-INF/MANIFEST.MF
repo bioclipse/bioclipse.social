@@ -16,7 +16,8 @@ Require-Bundle:
  org.springframework.osgi.aopalliance.osgi,
  org.eclipse.core.resources;bundle-version="3.4.2",
  net.bioclipse.business,
- net.bioclipse.rdf
+ net.bioclipse.rdf,
+ org.eclipse.help;bundle-version="3.6.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: net.bioclipse.myexperiment,
  net.bioclipse.myexperiment.business

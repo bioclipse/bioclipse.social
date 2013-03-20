@@ -14,7 +14,7 @@ import net.bioclipse.core.PublishedClass;
 import net.bioclipse.core.PublishedMethod;
 import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.managers.business.IBioclipseManager;
-
+//The Twitter feature is not included in the social feature for the moment
 @PublishedClass(
     value="Manager that allows interaction with Twitter."
 )
