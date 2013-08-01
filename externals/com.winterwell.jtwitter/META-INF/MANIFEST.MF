@@ -6,9 +6,7 @@ Bundle-Version: 1.2.0
 Require-Bundle: org.eclipse.core.runtime
 Bundle-ClassPath: .,
  jars/jtwitter.jar
-Bundle-Activator: com.winterwell.jtwitter.Activator
 Eclipse-AutoStart: true
 Bundle-Vendor: The Bioclipse Team
 Import-Package: org.apache.log4j
-Export-Package: com.winterwell.jtwitter,
- winterwell.jtwitter
+Export-Package: winterwell.jtwitter
