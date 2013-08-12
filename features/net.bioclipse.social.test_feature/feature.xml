@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.bioclipse.social.test_feature"
+      label="Bioclipse Social Test Feature"
+      version="2.5.0.qualifier"
+      provider-name="The Bioclipse Team"
+      plugin="net.bioclipse.myexperiment.tests">
+
+   <requires>
+      <import feature="net.bioclipse.core_feature" />
+      <import feature="net.bioclipse.social_feature" />
+      <import feature="net.bioclipse.rdf_feature" />
+   </requires>
+
+   <plugin
+         id="net.bioclipse.myexperiment.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
