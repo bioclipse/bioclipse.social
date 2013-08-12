@@ -17,7 +17,7 @@
 <booleanAttribute key="includeOptional" value="true"/>
 <stringAttribute key="location" value="${workspace_loc}/../junit-workspace"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/net.bioclipse.myexperiment.tests/src/net/bioclipse/myexperiment/tests/business/AllPluginTests.java"/>
+<listEntry value="/net.bioclipse.myexperiment.tests/src/net/bioclipse/myexperiment/tests/business/AllMyExperimentManagerPluginTests.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
