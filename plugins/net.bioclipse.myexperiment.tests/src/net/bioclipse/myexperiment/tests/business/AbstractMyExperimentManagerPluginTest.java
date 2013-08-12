@@ -10,17 +10,11 @@
  ******************************************************************************/
 package net.bioclipse.myexperiment.tests.business;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URL;
 import java.util.List;
 
-import net.bioclipse.core.ResourcePathTransformer;
+import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.myexperiment.business.IMyExperimentManager;
 
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.FileLocator;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,8 +22,28 @@ public abstract class AbstractMyExperimentManagerPluginTest {
 
     protected static IMyExperimentManager myexperiment;
     
-    @Test public void testDoSomething() {
-        // FIXME: myexperiment.doSomething();
+    @Test public void testDownloadWorkflow() throws BioclipseException {
+        String file = myexperiment.downloadWorkflow(927);
+        Assert.assertNotNull(file);
+        Assert.assertNotSame(0, file.length());
+    }
+
+    @Test public void testDownloadWorkflowAndSafe() throws BioclipseException {
+        String file = myexperiment.downloadWorkflow(927, "/Virtual/workflow.test");
+        Assert.assertNotNull(file);
+        Assert.assertNotSame(0, file.length());
+    }
+
+    @Test public void testSearch() throws BioclipseException {
+        List<Integer> bslScripts = myexperiment.search("opentox");
+        Assert.assertNotNull(bslScripts);
+        Assert.assertNotSame(0, bslScripts.size());
+    }
+
+    @Test public void testList() throws BioclipseException {
+        List<Integer> bslScripts = myexperiment.list();
+        Assert.assertNotNull(bslScripts);
+        Assert.assertNotSame(0, bslScripts.size());
     }
 
 }
