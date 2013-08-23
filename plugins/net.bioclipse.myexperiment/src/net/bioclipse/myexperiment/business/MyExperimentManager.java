@@ -171,7 +171,11 @@ public class MyExperimentManager implements IBioclipseManager {
                 typeSeparatorFound = true;
             }
         }
-        return result.reverse().toString();
+        
+        if (!typeSeparatorFound)
+            return filename;
+        else
+            return result.reverse().toString();
     }
 
     private IProject getProjectDirectory(IProgressMonitor monitor)
