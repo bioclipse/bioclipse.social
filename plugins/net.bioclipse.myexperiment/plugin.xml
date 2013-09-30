@@ -7,4 +7,12 @@
       service="net.bioclipse.myexperiment.business.MyExperimentManagerFactory">
     </scriptContribution>
   </extension>
+  <extension
+        point="org.eclipse.help.toc">
+     <toc
+           category="Social"
+           file="toc.xml"
+           primary="true">
+     </toc>
+  </extension>
 </plugin>

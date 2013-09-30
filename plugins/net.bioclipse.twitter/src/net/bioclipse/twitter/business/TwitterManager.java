@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.Preferences;
 
 import winterwell.jtwitter.Twitter;
-
+//The Twitter feature is not included in the social feature for the moment
 public class TwitterManager implements IBioclipseManager {
 
     private static final Logger logger = Logger.getLogger(TwitterManager.class);
