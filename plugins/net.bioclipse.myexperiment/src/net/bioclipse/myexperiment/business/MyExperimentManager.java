@@ -161,6 +161,7 @@ public class MyExperimentManager implements IBioclipseManager {
     }
     
     private String removeType(String filename) {
+    	if (!filename.contains("^^")) return filename;
         StringBuffer result = new StringBuffer();
         boolean typeSeparatorFound = false;
         for (int i=filename.length()-1; i>=0; i--) {
@@ -171,7 +172,11 @@ public class MyExperimentManager implements IBioclipseManager {
                 typeSeparatorFound = true;
             }
         }
-        return result.reverse().toString();
+        
+        if (!typeSeparatorFound)
+            return filename;
+        else
+            return result.reverse().toString();
     }
 
     private IProject getProjectDirectory(IProgressMonitor monitor)
