@@ -7,7 +7,7 @@
       plugin="net.bioclipse.myexperiment">
 
    <description>
-      Linking Bioclipse to the Social Web with support for e.g. MyExperiment (www.myexperiment.org) for wharing workflows and scripts.
+      Linking Bioclipse to the Social Web with support for e.g. MyExperiment (www.myexperiment.org) for sharing workflows and scripts.
    </description>
 
    <copyright>
